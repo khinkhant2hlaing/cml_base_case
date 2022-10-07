@@ -19,7 +19,7 @@ jobs:
           python train.py
 
           # Create CML report
-          cml comment create --pr --publish metrics.txt
-          #cat metrics.txt >> report.md
-          #cml publish plot.png --md >> report.md
-          #cml send-comment report.md
+          # cml comment create --pr --publish metrics.txt
+          cat metrics.txt >> report.md
+          cml publish plot.png --md >> report.md
+          cml send-comment --pr --update report.md
